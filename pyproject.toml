@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Concurrency tools for Python."
 authors = ["James Mishra <james.mishra@neocrym.com>"]
 license = "MIT"
+readme = "README.rst"
 
 [tool.poetry.dependencies]
 python = "^3.8"
