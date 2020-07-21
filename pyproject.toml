@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "ori"
-version = "0.1.0"
+version = "0.1.1"
 description = "Concurrency tools for Python."
 authors = ["James Mishra <james.mishra@neocrym.com>"]
 license = "MIT"
