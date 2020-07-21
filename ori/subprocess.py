@@ -26,7 +26,29 @@ def run_process_in_background(
     """
     Runs `command`, writing stdout and stderr to the logger in `logger`.
 
-    Based on https://stackoverflow.com/questions/31833897/python-read-from-subprocess-stdout-and-stderr-separately-while-preserving-order/56918582#56918582
+    This function is based on `this answer on StackOverflow <https://stackoverflow.com/questions/31833897/python-read-from-subprocess-stdout-and-stderr-separately-while-preserving-order/56918582#56918582>`_.
+
+    Args:
+        command: This is an iterable--like a list--of strings. This iterable
+            describes a command line program to run. For example, the
+            command `ls -l /home` would be broken up into
+            `["ls", "-l", "/home"]`. You can use the function
+            :func:`shlex.split` to turn any string command into an iterable.
+        stdout_function: This is a function that your subprocess will call for
+            every line of standard output that your program emits.
+            You can choose functions like :func:`print` or, say,
+            :func:`logging.debug`.
+        stderr_function: This is a function that your subprocess will call
+            for every line of standard error that your program emits.
+            The same rules apply as for `stdout_function`.
+        exception_function: This is a function to call if we catch an exception
+            while logging the program.
+        exit_code_on_killed: This is the exit code we return for the subprocess
+            when we catch an exception while logging the program.
+
+    Returns:
+        This returns an already-started :class:`multiprocessing.Process` instance,
+        which you can use to monitor or kill the process as time goes on.
     """
 
     if not stdout_function:
