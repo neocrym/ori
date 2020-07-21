@@ -18,13 +18,13 @@ Ori modules
 
 The tools that Ori provides are divided into several modules.
 
-`ori.asyncio </ori.asyncio/>`_ -- Tools to integrate Python asyncio code into a synchronous codebase, and vice-versa.
+:mod:`ori.asyncio` -- Tools to integrate Python asyncio code into a synchronous codebase, and vice-versa.
  
-`ori.concurrency </ori.concurrency/>`_ -- Tools to run Python functions in the background using multithreading or multiprocessing.
+:mod:`ori.concurrency` -- Tools to run Python functions in the background using multithreading or multiprocessing.
 
-`ori.poolchain </ori.poolchain/>`_ -- A way to chain function calls for parallel processing over any list or other iterable.
+:mod:`ori.poolchain` -- A way to chain function calls for parallel processing over any list or other iterable.
 
-`ori.subprocess </ori.subprocess>`_ -- Tools for running external commands as subprocesses and efficiently collecting the standard output and standard error.
+:mod:`ori.subprocess` -- Tools for running external commands as subprocesses and efficiently collecting the standard output and standard error.
 
 
 Frequently Asked Questions (FAQs)
@@ -51,6 +51,7 @@ Ori manages itself with the Python packaging tool `Poetry <https://python-poetry
 .. code:: text
 
     pip3 install poetry
+    poetry install
 
 To check that your changes to Ori's codebase match our coding standards, and to reformat any errant code to meet our standards, run this command:
 

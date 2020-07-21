@@ -3,6 +3,19 @@ Ori, a high-level concurrency library for Python
 
 Ori is a high-level wrapper around Python's `concurrent.futures` module, designed to make multithreading and multiprocessing as easy as possible.
 
+Ori modules
+-----------
+
+The tools that Ori provides are divided into several modules.
+
+`ori.asyncio <https://ori.technology.neocrym.com/en/latest/ori.asyncio/>`_ -- Tools to integrate Python asyncio code into a synchronous codebase, and vice-versa.
+
+`ori.concurrency <https://ori.technology.neocrym.com/en/latest/ori.concurrency/>`_ -- Tools to run Python functions in the background using multithreading or multiprocessing.
+
+`ori.poolchain <https://ori.technology.neocrym.com/en/latest/ori.poolchain/>`_ -- A way to chain function calls for parallel processing over any list or other iterable.
+
+`ori.subprocess <https://ori.technology.neocrym.com/en/latest/ori.subprocess/>`_ -- Tools for running external commands as subprocesses and efficiently collecting the standard output and standard error.
+
 
 Frequently Asked Questions (FAQs)
 ---------------------------------
@@ -25,25 +38,27 @@ For the hardcore `asyncio <https://docs.python.org/3/library/concurrent.futures.
 
 Ori manages itself with the Python packaging tool `Poetry <https://python-poetry.org/>`_. You can install Poetry on your system with:
 
-.. code:: plain
+.. code:: text
 
     pip3 install poetry
+    poetry install
+
 
 To check that your changes to Ori's codebase match our coding standards, and to reformat any errant code to meet our standards, run this command:
 
-.. code:: plain
+.. code:: text
 
     poetry run make lint
 
 To run Ori's unit tests in the Python virtualenv created by Poetry, just run:
 
-.. code:: plain
+.. code:: text
 
     poetry run make test
     
 We can also run tests across multiple versions of Python with `Tox <https://tox.readthedocs.io/en/latest/>`_, but it requres your system has `Docker <https://docs.docker.com/get-docker/>`_ and `Docker Compose <https://docs.docker.com/compose/install/>`_ installed. If so, just run:
 
-.. code:: plain
+.. code:: text
 
     poetry run make tox
 
