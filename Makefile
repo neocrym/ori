@@ -6,7 +6,7 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SPHINXAPIDOC  ?= sphinx-apidoc
-SOURCEDIR     = source
+SOURCEDIR     = docsource
 BUILDDIR      = build
 
 # Put it first so that "make" without argument is like "make help".
