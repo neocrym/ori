@@ -25,6 +25,13 @@ tox:
 test:
 	python -m unittest
 
+# Update dependencies and sync with our dependencies.
+# We need the .requirements.txt file because readthedocs.io does not support
+# poetry yet.
+updatedeps:
+	poetry update
+	poetry export --dev --format requirements.txt > .requirements.txt
+
 .PHONY: help lint tox test Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
