@@ -1,0 +1,12 @@
+# This docker-compose file helps us run tests for multiple Python
+# versions installed in a Docker container.
+version: "2.4"
+services:
+  tox:
+    image: fkrull/multi-python:focal
+    init: true
+    restart: always
+    entrypoint: tox
+    working_dir: /code
+    volumes:
+      - ".:/code"

@@ -19,7 +19,10 @@ lint:
 	black .
 	pylint ori
 
-.PHONY: help lint Makefile
+tox:
+	docker-compose run tox
+
+.PHONY: help lint tox Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
