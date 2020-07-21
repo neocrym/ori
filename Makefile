@@ -22,7 +22,10 @@ lint:
 tox:
 	docker-compose run tox
 
-.PHONY: help lint tox Makefile
+test:
+	python -m unittest
+
+.PHONY: help lint tox test Makefile
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).

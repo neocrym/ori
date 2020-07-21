@@ -36,13 +36,39 @@ Ori was written by `James Mishra <https://jamesmishra.com>`_ and incubated at `N
 
 The source code for Ori is owned by Neocrym Records Inc, but licensed to Ori under the MIT License.
 
-**Why should I use Ori over directly interfacing with `concurrent.futures`?**
+**Why should I use Ori over directly interfacing with concurrent.futures?**
 
-The Python module `concurrent.futures` was introduced as a high-level abstraction over lower-level interfaces like `threading.Thread` and `multiprocessing.Process`. However, `concurrent.futures` merely moves the problem away from managing threads or processes to managing *executors*. Ori has the ambitious goal of also abstracting away the executors--making multithreading or multiprocessing no harder than writing single-threaded code.
+The Python module `concurrent.futures <https://docs.python.org/3/library/concurrent.futures.html>`_ was introduced as a high-level abstraction over lower-level interfaces like `threading.Thread` and `multiprocessing.Process`. However, `concurrent.futures` merely moves the problem away from managing threads or processes to managing *executors*. Ori has the ambitious goal of also abstracting away the executors--making multithreading or multiprocessing no harder than writing single-threaded code.
 
 **Is Ori a good replacement for Python's asyncio?**
 
-For the hardcore `asyncio` user, probably not. Ori is focused on providing high-level abstractions over Python's `concurrent.futures` module that provides speed boosts for synchronous, I/O-bound Python.
+For the hardcore `asyncio <https://docs.python.org/3/library/concurrent.futures.html>`_ user, probably not. Ori is focused on providing high-level abstractions over Python's  `concurrent.futures <https://docs.python.org/3/library/concurrent.futures.html>`_ module that provides speed boosts for synchronous, I/O-bound Python.
+
+**What do I need to know to contribute to Ori?**
+
+Ori manages itself with the Python packaging tool `Poetry <https://python-poetry.org/>`_. You can install Poetry on your system with:
+
+.. code:: text
+
+    pip3 install poetry
+
+To check that your changes to Ori's codebase match our coding standards, and to reformat any errant code to meet our standards, run this command:
+
+.. code:: text
+
+    poetry run make lint
+
+To run Ori's unit tests in the Python virtualenv created by Poetry, just run:
+
+.. code:: text
+
+    poetry run make test
+    
+We can also run tests across multiple versions of Python with `Tox <https://tox.readthedocs.io/en/latest/>`_, but it requres your system has `Docker <https://docs.docker.com/get-docker/>`_ and `Docker Compose <https://docs.docker.com/compose/install/>`_ installed. If so, just run:
+
+.. code:: text
+
+    poetry run make tox
 
 **Where did the name "Ori" come from?**
 

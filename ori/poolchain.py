@@ -16,9 +16,9 @@ For example, here is one way to use a poolchain.
     results = (
         PoolChain()
         .add_threadpool(lambda num: num * 10)
-        .add_threadpool(lambda num: str(num))
-        .add_threadpool(lambda s: s + " is a number")
-    ).execute_lazy([1, 2, 3, 4, 5])
+        .add_processpool(str, chunksize=2, max_workers=3)
+        .add_threadpool(lambda s: s + " is a number", timeout=5)
+    ).execute_eager([1, 2, 3, 4, 5])
 
     for row in results:
         print(row)
