@@ -3,7 +3,7 @@ Module for the poolchain.
 
 The "poolchain" is a high-level abstraction over the Python
 :mod:`concurrent.futures` concurrency  module. A poolchain used
-to run a single iterable (e.g. a list) through a chain of functions 
+to run a single iterable (e.g. a list) through a chain of functions
 and collect an iterable of results at the end.
 
 For example, here is one way to use a poolchain.
@@ -198,7 +198,7 @@ class PoolChain:
     ):
         """
         Add a function to run with a "process pool" to the poolchain.
-        
+
         You cannot pass a `lambda` function to a process pool. You need
         to make up your poolchain entirely with named functions defined with
         the `def` keyword.
@@ -303,7 +303,7 @@ class PoolChain:
             the poolchain in the current thread. Every time the next
             output is fetched, the corresponding input is sent through
             every function in the chain.
-        
+
         """
         for item in iterable:
             current_val = item
@@ -330,6 +330,6 @@ class PoolChain:
         Returns:
             This function returns a complete Python list containing the return
             value of every element in the list.
-            
+
         """
         return list(self.execute_lazy_single_threaded(iterable))
