@@ -53,7 +53,12 @@ def run_in_background(
     def wrapper(*args, **kwargs):
         return executor.submit(func, *args, **kwargs)
 
-    wrapper.executor = executor
+    # mypy throws an error here because callable functions typically do not have
+    # `.executor ` as an attribute. There are various ways to fix this, which
+    # we should check in on later.
+    # Read more at https://github.com/python/mypy/issues/2087
+    # TODO: Fix this mypy type error.
+    wrapper.executor = executor  # type: ignore
     return wrapper
 
 

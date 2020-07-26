@@ -1,6 +1,6 @@
+"""Unit test module for :mod:`ori.subprocess`."""
 import contextlib
 import os
-import tempfile
 import unittest
 import uuid
 
@@ -29,7 +29,10 @@ def get_temporary_filename():
 
 
 def create_file_logger(filename):
+    """Creates a simple file logger that can be used in the background."""
+
     def printer(value):
+        """Append the value to the enclosed filename."""
         with open(filename, "a") as fh:
             return fh.write(value)
 
@@ -37,7 +40,10 @@ def create_file_logger(filename):
 
 
 class TestSubprocess(unittest.TestCase):
+    """Unit tests for ori.subprocess."""
+
     def test__run_process_in_background__stdout(self):
+        """Check that we can log stdout after running a function in the background."""
         with get_temporary_filename() as log_filename:
             logger = create_file_logger(log_filename)
             if os.name == "nt":

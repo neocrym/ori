@@ -60,7 +60,7 @@ class PoolChain:
 
     def __init__(self):
         """Create a new poolchain."""
-        self.chain: typing.Iterable[_ChainElement] = []
+        self.chain: typing.List[_ChainElement] = []
 
     def add(
         self,

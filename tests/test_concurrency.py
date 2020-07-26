@@ -1,9 +1,13 @@
+"""
+Tests for the :mod:`ori.concurrency` module.
+"""
 import unittest
 
 import ori.concurrency
 
 
 def demo_func(value):
+    """A test function to run in the background."""
     return value
 
 
@@ -14,7 +18,10 @@ BACKGROUND_FUNCTIONS = {
 
 
 class TestConcurrency(unittest.TestCase):
+    """Unit tests for ori.concurrency."""
+
     def test_run_in_background(self):
+        """Test that we can make a function backgroundable."""
         for func_name in BACKGROUND_FUNCTIONS:
             background_func = BACKGROUND_FUNCTIONS[func_name]
             with self.subTest(func_name=func_name):

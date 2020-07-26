@@ -17,7 +17,8 @@ help:
 lint:
 	isort --atomic --apply --recursive ori tests
 	black .
-	pylint ori
+	pylint ori tests
+	mypy ori tests
 
 tox:
 	docker-compose run tox
