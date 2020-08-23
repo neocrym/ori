@@ -42,7 +42,7 @@ to get an iterator of the final return value or
 import concurrent.futures
 import typing
 
-from ori.errors import OriValidationError
+from ori.errors import OriNoInteractiveProcessPools, OriValidationError
 
 
 class _ChainElement(typing.NamedTuple):
@@ -228,6 +228,16 @@ class PoolChain:
                 a real Executor, a non-integer for one of the integer fields,
                 etc.
         """
+        import __main__ as processpool_main  # type: ignore
+
+        if not hasattr(processpool_main, "__file__"):
+            raise OriNoInteractiveProcessPools(
+                "It looks like you are using Ori from the Python interactive "
+                "prompt, as opposed to running Python code saved to a file. "
+                "The executor for processpools can only run with importable "
+                "Python code saved to file.\n"
+                "Save your code to a file and try again."
+            )
         return self.add(
             function=function,
             executor_class=concurrent.futures.ProcessPoolExecutor,
