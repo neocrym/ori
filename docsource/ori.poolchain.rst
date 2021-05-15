@@ -1,5 +1,5 @@
-ori.poolchain module
-====================
+ori.poolchain
+=============
 
 .. automodule:: ori.poolchain
    :members:

@@ -1,5 +1,5 @@
-ori.subprocess module
-=====================
+ori.subprocess
+==============
 
 .. automodule:: ori.subprocess
    :members:

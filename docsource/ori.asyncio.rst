@@ -1,5 +1,5 @@
-ori.asyncio module
-==================
+ori.asyncio
+===========
 
 .. automodule:: ori.asyncio
    :members:

@@ -1,5 +1,5 @@
-ori.concurrency module
-======================
+ori.concurrency
+===============
 
 .. automodule:: ori.concurrency
    :members:

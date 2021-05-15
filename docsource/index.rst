@@ -7,8 +7,16 @@ Ori, a high-level concurrency library for Python
 =================================================
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
+   :hidden:
    :caption: Contents:
+
+   Home <self>
+   ori.asyncio
+   ori.concurrency
+   ori.poolchain
+   ori.subprocess
+   ori.errors
 
 
 Ori is a high-level wrapper around Python's `concurrent.futures` module, designed to make multithreading and multiprocessing as easy as possible.

@@ -1,5 +1,5 @@
-ori.errors module
-=================
+ori.errors
+==========
 
 .. automodule:: ori.errors
    :members:
