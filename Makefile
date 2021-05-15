@@ -31,7 +31,7 @@ test:
 # poetry yet.
 updatedeps:
 	poetry update
-	poetry export --dev --format requirements.txt > .requirements.txt
+	poetry export --dev --without-hashes --format=requirements.txt --output=.requirements.txt
 
 .PHONY: help lint tox test Makefile
 
