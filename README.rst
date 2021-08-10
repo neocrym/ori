@@ -24,7 +24,7 @@ Frequently Asked Questions (FAQs)
 
 Ori was written by `James Mishra <https://jamesmishra.com>`_ and incubated at `Neocrym <https://neocrym.com>`_, a record label that uses artificial intelligence to find and promote musicians. Neocrym heavily relies on Ori to make their I/O-bound Python code run faster.
 
-The source code for Ori is owned by Neocrym Records Inc, but licensed to Ori under the MIT License.
+The source code for Ori is owned by Neocrym Records Inc., but licensed to Ori under the MIT License.
 
 **Why should I use Ori over directly interfacing with concurrent.futures?**
 
