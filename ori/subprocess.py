@@ -31,7 +31,7 @@ def _target(
         stderr_function = _null_function
     if not exception_function:
         exception_function = _null_function
-    command_process = subprocess.Popen(
+    command_process = subprocess.Popen(  # pylint: disable=consider-using-with
         command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, close_fds=True,
     )
 

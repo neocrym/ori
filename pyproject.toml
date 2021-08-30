@@ -7,12 +7,12 @@ license = "MIT"
 readme = "README.rst"
 
 [tool.poetry.dependencies]
-python = ">=3.7"
+python = ">=3.7,<4.0"
 neocrym-sphinx-theme = "*"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
-pylint = "^2.5.3"
+pylint = "^2.10.2"
 sphinx = "^3.1.2"
 isort = "<5"
 tox = "^3.17.1"
