@@ -8,13 +8,13 @@ Ori modules
 
 The tools that Ori provides are divided into several modules.
 
-`ori.asyncio <https://ori.technology.neocrym.com/en/latest/ori.asyncio/>`_ -- Tools to integrate Python asyncio code into a synchronous codebase, and vice-versa.
+`ori.asyncio <https://ori.tech.neocrym.com/en/latest/ori.asyncio/>`_ -- Tools to integrate Python asyncio code into a synchronous codebase, and vice-versa.
 
-`ori.concurrency <https://ori.technology.neocrym.com/en/latest/ori.concurrency/>`_ -- Tools to run Python functions in the background using multithreading or multiprocessing.
+`ori.concurrency <https://ori.tech.neocrym.com/en/latest/ori.concurrency/>`_ -- Tools to run Python functions in the background using multithreading or multiprocessing.
 
-`ori.poolchain <https://ori.technology.neocrym.com/en/latest/ori.poolchain/>`_ -- A way to chain function calls for parallel processing over any list or other iterable.
+`ori.poolchain <https://ori.tech.neocrym.com/en/latest/ori.poolchain/>`_ -- A way to chain function calls for parallel processing over any list or other iterable.
 
-`ori.subprocess <https://ori.technology.neocrym.com/en/latest/ori.subprocess/>`_ -- Tools for running external commands as subprocesses and efficiently collecting the standard output and standard error.
+`ori.subprocess <https://ori.tech.neocrym.com/en/latest/ori.subprocess/>`_ -- Tools for running external commands as subprocesses and efficiently collecting the standard output and standard error.
 
 
 Frequently Asked Questions (FAQs)
