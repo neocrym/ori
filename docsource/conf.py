@@ -51,7 +51,7 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = "neocrym_sphinx_theme"
+html_theme = "neocrym-sphinx-theme"
 html_show_sphinx = False
 html_copy_source = False
 html_show_source = False
